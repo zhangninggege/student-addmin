@@ -1,0 +1,238 @@
+*:not(dd, dt) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper {
+        background-color: #fff;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .header h2 {
+        line-height: 100%;
+        background-color: gray;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+    .open-close{
+        line-height: 40px;
+    }
+    .user {
+        width: 100%;
+        height: 40px;
+        background-color: gray;
+        text-align: center;
+        color: honeydew;
+        margin-top: 20px;
+        transform: translatey(-50%);
+        opacity: 0.5;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .username {
+        line-height: 40px;
+    }
+
+    a:link {
+        color: #fff; 
+        line-height: 40px;
+    }
+
+    .left {
+        background-color: lightgray;
+        width: 30%;
+        height: auto;
+        position: fixed;
+        height: 60vh;
+        top:39%;
+        width: 0;
+        overflow: hidden;
+    }
+
+    dt {
+        font-weight: bold;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .left dd.active {
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        background-color: gray;
+        margin: 0;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .left dd {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .bg {
+        width: 30px;
+        font-size: 30px;
+        margin: 0 auto;
+        color: lightgray;
+        overflow: hidden;
+        animation: bgrun 6s steps(6,start) 1s infinite;
+        text-shadow: 2px 2px 2px rgba(168, 166, 166, 0.1), -2px 2px 2px rgba(168, 166, 166, 0.1), 2px -2px 2px rgba(168, 166, 166, 0.1), -2px -2px 2px rgba(168, 166, 166, 0.1);
+    }
+    .right{
+        margin-top: 300px;
+        color: #000;
+    }
+    #student-list{
+        white-space: nowrap;
+        overflow: scroll;
+        
+    }
+    th{
+        width: 30px;
+    }
+    td{
+        padding: 2px 10px;
+        font-size: 12px;
+    }
+    #add-student{
+        margin: 10px auto;
+        text-align: center;
+        background-color: lightgray;
+        opacity: 0.5;
+        display: none;
+    }
+    #add-student div{
+        margin-bottom:10px ;
+    }
+    .sex input{
+        margin: 0 10px;
+    }
+    .btn button{
+        width: 80%;
+        height: 30px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        
+    }
+    div.edit-div{
+        border: 1px solid saddlebrown ;
+        text-align: center;
+        position: fixed;
+        top: 320px;
+        left: 50%;
+        padding-top: 40px;
+        width: 300px;
+        height: 280px;
+        background-color: #fff;
+        transform: translateX(-50%);
+        display: none;
+    }
+    @keyframes bgrun {
+        0%{
+           max-height: 0;
+        }
+        100%{
+            max-height: 240px ;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .wrapper{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .header{
+        background-color:#fff;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #aaa;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    .user{
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+    .open-close{
+        display: none;
+    }
+    .left{
+        position: fixed;
+        width: 15vw;
+        height: 80vh;
+        background-color: gray;
+        color: #fff;
+        font-size: 30px;
+    }
+    .left dt{
+        font-weight: bold;
+    }
+    .left dd{
+        font-size: 25px;
+    }
+    .left dd:hover{
+        background-color:lightgray;
+        margin: 0;
+        padding-left: 40px;
+        color: #fff;
+    }
+    .left dd.active{
+        background-color: #fff;
+        color: gray;
+        margin: 0;
+        padding-left: 40px;
+    }
+    
+    .right{
+       left: 16vw;
+       top: 125px;
+       width:84vw;
+       height: 600px;
+        position: absolute;
+    }
+    .right .student-list{
+        display: none;
+    }
+    table{
+        width: 100%;
+    }
+    .bg{
+        display: none;
+    }
+    .add-student{
+
+    }
+  
+}

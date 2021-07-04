@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原生js学生管理系统</title>
+    <link rel="shortcut icon" href="./image/title.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img class="logo" src="./image/title.webp" alt="">
+            <h2>学生管理系统</h2>
+            <ul class="user">
+                <li class="open-close"><button>菜单</button></li>
+                <li class="username">hello&#10;张宁</li>
+                <li class="logout"><a href="#">退出登录</a></li>
+            </ul>
+        </div>
+        <div class="left">
+            <dl class="menu">
+                <dt>学生管理</dt>
+                <dd class="active"  data-id="student-list">学生列表</dd>
+                <dd data-id="add-student">添加学生</dd>
+            </dl>
+            <div class="bg">曲阜师范大学</div>
+        </div>
+        <div class="right">
+            <div id="student-list">
+                <table border="1" cellspacing='0'>
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>学号</th>
+                            <th>手机号码</th>
+                            <th>地址</th>
+                            <th>邮箱</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+                <div class="edit-div">
+                    <form id="form-edit">
+                        <div class="name"><label for="name">姓名：</label><input type="text" id="name" name='name'></div>
+                        <div class="sex">性别：<label for="male">男</label><input type="radio" name="sex" id="male" value="0"><label
+                                for="female">女</label> <input type="radio" name="sex" id="female" value="1"></div>
+                        <div class="phonenumber"><label for="phone">手机：</label><input type="text" id="phone" name="phone"></div>
+                        <div class="student-num"><label for="student-num">学号：</label><input type="text" id="student-num" name="sNo"></div>
+                        <div class="country"><label for="country">生日：</label><input type="text" id="country" name="birth"></div>
+                        <div class="grade"><label for="grade">地址：</label><input type="text" id="grade" name="addres"></div>
+                        <div class="study"><label for="study">邮箱：</label><input type="email" id="study" name="email"></div>
+                        <div class="edit-sure-btn"><button>确定修改</button></div> 
+                        <div class="edit-cancel-btn"><button>取消</button></div>
+                    </form>
+                </div>
+            </div>
+            <div id="add-student">
+                <h3>添加学生</h3>
+                <form action="" class="form-add">
+                    <div class="name"><label for="name">姓名：</label><input type="text" id="name" name='name'></div>
+                    <div class="sex">性别：<label for="male">男</label><input type="radio" name="sex" id="male" value="0"><label
+                            for="female">女</label> <input type="radio" name="sex" id="female" value="1"></div>
+                    <div class="phonenumber"><label for="phone">手机：</label><input type="text" id="phone" name="phone"></div>
+                    <div class="student-num"><label for="student-num">学号：</label><input type="text" id="student-num" name="sNo"></div>
+                    <div class="country"><label for="country">生日：</label><input type="text" id="country" name="birth"></div>
+                    <div class="grade"><label for="grade">地址：</label><input type="text" id="grade" name="addres"></div>
+                    <div class="study"><label for="study">邮箱：</label><input type="email" id="study" name="email"></div>
+                    <div class="add-btn"><button>添加</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./event.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
